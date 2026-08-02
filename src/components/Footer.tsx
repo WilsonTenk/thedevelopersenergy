@@ -53,23 +53,12 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenQuoteModal }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-11 h-11 rounded-xl bg-neutral-900 border border-neutral-700 overflow-hidden shrink-0 shadow-lg p-0.5">
-                <img
-                  src={SITE_IMAGES.logo}
-                  alt="The Developers Energy Logo"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <div>
-                <span className="font-extrabold text-base tracking-wider text-white uppercase block">
-                  The Developers Energy
-                </span>
-                <span className="text-[10px] tracking-[0.2em] text-neutral-300 uppercase font-semibold">
-                  Limited &bull; Energy Trade & Advisory
-                </span>
-              </div>
+            <div className="inline-block bg-white rounded-xl p-2 shadow-lg">
+              <img
+                src={SITE_IMAGES.logoColor}
+                alt="The Developers Energy Logo"
+                className="h-20 w-auto object-contain"
+              />
             </div>
 
             <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">

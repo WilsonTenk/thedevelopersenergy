@@ -77,23 +77,14 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center space-x-3 text-left group focus:outline-none"
+            className="flex items-center text-left group focus:outline-none"
           >
-            <div className="w-11 h-11 rounded-xl bg-neutral-100 border border-neutral-300 overflow-hidden shrink-0 shadow-sm group-hover:border-black transition-all p-0.5">
+            <div className="bg-neutral-950 rounded-xl px-3 py-1 flex items-center shadow-sm group-hover:bg-neutral-800 transition-colors">
               <img
-                src={SITE_IMAGES.logo}
+                src={SITE_IMAGES.logoWhite}
                 alt="The Developers Energy Logo"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform"
+                className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
               />
-            </div>
-            <div>
-              <div className="font-extrabold text-base tracking-wider text-black uppercase group-hover:text-neutral-700 transition-colors">
-                The Developers Energy
-              </div>
-              <div className="text-[10px] tracking-[0.22em] text-neutral-600 uppercase font-bold">
-                Limited &bull; Energy Trade & Advisory
-              </div>
             </div>
           </button>
 

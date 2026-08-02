@@ -1,6 +1,8 @@
 // Centralized image paths generated via AI Studio & verified fallback assets
 
 const companyLogoImg = '/src/assets/images/energy_company_logo_1785590990990.jpg';
+const logoWhiteNoBg = '/src/assets/images/logo-white-no-bg.png';
+const logoColor = '/src/assets/images/logo-color.png';
 const heroTankerShipImg = '/src/assets/images/hero_tanker_ship_1785591002783.jpg';
 const heroTankFarmImg = '/src/assets/images/hero_tank_farm_1785591015514.jpg';
 const heroOffshorePlatformImg = '/src/assets/images/hero_offshore_platform_1785591027631.jpg';
@@ -8,6 +10,8 @@ const panoramicRefineryBannerImg = '/src/assets/images/panoramic_refinery_banner
 
 export const SITE_IMAGES = {
   logo: companyLogoImg,
+  logoWhite: logoWhiteNoBg,
+  logoColor: logoColor,
   heroSlides: [
     {
       id: 'slide-1',
