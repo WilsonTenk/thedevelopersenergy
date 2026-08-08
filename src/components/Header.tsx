@@ -73,19 +73,17 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between min-h-[92px] py-2">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center text-left group focus:outline-none"
+            className="flex items-center text-left group focus:outline-none py-1"
           >
-            <div className="bg-neutral-950 rounded-xl px-3 py-1 flex items-center shadow-sm group-hover:bg-neutral-800 transition-colors">
-              <img
-                src={SITE_IMAGES.logoWhite}
-                alt="The Developers Energy Logo"
-                className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
-              />
-            </div>
+            <img
+              src={SITE_IMAGES.logoHeader}
+              alt="The Developers Energy Logo"
+              className="h-20 sm:h-24 max-h-24 w-auto object-contain transition-transform group-hover:scale-105 duration-200"
+            />
           </button>
 
           {/* Desktop Nav Items */}

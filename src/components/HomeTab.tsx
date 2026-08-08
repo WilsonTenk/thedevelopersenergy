@@ -220,48 +220,64 @@ export const HomeTab: React.FC<HomeTabProps> = ({
         </div>
       </section>
 
-      {/* WHY THE DEVELOPERS ENERGY (CLEAN BENTO HIGHLIGHTS) */}
-      <section className="bg-neutral-900 py-16 text-white border-y border-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-black bg-white px-3 py-1 rounded-full inline-block">
-              Institutional Advantage
-            </span>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight mt-2">
+      {/* WHY THE DEVELOPERS ENERGY — HERO-STYLE BACKGROUND TREATMENT */}
+      <section className="relative bg-black py-16 text-white border-y border-neutral-800 overflow-hidden">
+        {/* Background Image — full bleed, no opacity reduction */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src={SITE_IMAGES.horizontalBanners.whyPartner}
+            alt="Why Partner Background"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Hero-style: horizontal gradient — darkens left side where text lives */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
+          {/* Hero-style: vertical gradient — darkens top + bottom edges */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          {/* Header — styled like the hero top-bar pill tags */}
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-neutral-200 text-xs font-extrabold text-black uppercase tracking-widest shadow-md">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
+              <span>Institutional Advantage</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
               Why Partner With The Developers Energy
             </h2>
-            <p className="text-neutral-400 text-xs sm:text-sm">
+            <p className="text-neutral-200 text-sm leading-relaxed drop-shadow-sm">
               Combining international supply networks with local regulatory mastery across Ghana's petroleum market.
             </p>
           </div>
 
+          {/* Cards — styled exactly like the hero's bg-black/80 backdrop-blur-md pill buttons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-black border border-neutral-800 rounded-3xl p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white">
+            <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-3xl p-7 space-y-3 shadow-2xl transition-all hover:border-white/40 hover:bg-black/90 group">
+              <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:bg-white/20 transition-colors">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-extrabold text-white">Bankable Deal Structuring</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <h3 className="text-lg font-extrabold text-white drop-shadow-sm">Bankable Deal Structuring</h3>
+              <p className="text-xs text-neutral-200 leading-relaxed">
                 Irrevocable Letters of Credit (LCs), trade finance advisory, and NPA compliance clearances that de-risk cross-border oil shipments.
               </p>
             </div>
 
-            <div className="bg-black border border-neutral-800 rounded-3xl p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white">
+            <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-3xl p-7 space-y-3 shadow-2xl transition-all hover:border-white/40 hover:bg-black/90 group">
+              <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:bg-white/20 transition-colors">
                 <Truck className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-extrabold text-white">Physical Cargo Execution</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <h3 className="text-lg font-extrabold text-white drop-shadow-sm">Physical Cargo Execution</h3>
+              <p className="text-xs text-neutral-200 leading-relaxed">
                 Direct cargo off-taking for Crude, Gasoil 10ppm, Unleaded Gasoline, and ATK with verified berth access and zero-demurrage records.
               </p>
             </div>
 
-            <div className="bg-black border border-neutral-800 rounded-3xl p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-700 flex items-center justify-center text-white">
+            <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-3xl p-7 space-y-3 shadow-2xl transition-all hover:border-white/40 hover:bg-black/90 group">
+              <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:bg-white/20 transition-colors">
                 <TrendingUp className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-extrabold text-white">Precision Intelligence</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <h3 className="text-lg font-extrabold text-white drop-shadow-sm">Precision Intelligence</h3>
+              <p className="text-xs text-neutral-200 leading-relaxed">
                 Daily Platts-aligned price monitoring, FX risk advisory, and regulatory intelligence for BDCs, OMCs, and institutional buyers.
               </p>
             </div>
@@ -333,31 +349,46 @@ export const HomeTab: React.FC<HomeTabProps> = ({
 
       {/* FINAL HIGH-IMPACT BENTO CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-black text-white rounded-3xl p-8 sm:p-12 text-center space-y-5 max-w-4xl mx-auto shadow-2xl relative overflow-hidden border border-neutral-800">
-          <div className="space-y-2 relative z-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Ready to Structure Your Next Cargo Deal?
-            </h2>
-            <p className="text-neutral-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-              Connect with our physical energy desk in Accra to discuss cargo allocations, Letters of Credit, or terminal discharge operations.
-            </p>
+        <div className="relative text-white rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl">
+          {/* Background Image — hero-style treatment */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src={SITE_IMAGES.horizontalBanners.ctaBanner}
+              alt="CTA Background"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Hero-style horizontal gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
+            {/* Hero-style vertical gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
           </div>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4 relative z-10">
-            <button
-              onClick={() => onOpenQuoteModal()}
-              className="px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-black bg-white hover:bg-neutral-200 shadow-xl flex items-center gap-2"
-            >
-              <span>Consult Trade Desk</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
+          <div className="relative z-10 p-8 sm:p-12 text-center space-y-5 max-w-4xl mx-auto">
+            <div className="space-y-3">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white drop-shadow-lg">
+                Ready to Structure Your Next Cargo Deal?
+              </h2>
+              <p className="text-neutral-200 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed drop-shadow-sm">
+                Connect with our physical energy desk in Accra to discuss cargo allocations, Letters of Credit, or terminal discharge operations.
+              </p>
+            </div>
 
-            <button
-              onClick={onOpenCalculator}
-              className="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-neutral-900 border border-neutral-700 hover:bg-neutral-800"
-            >
-              Cargo Estimator Tool
-            </button>
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <button
+                onClick={() => onOpenQuoteModal()}
+                className="px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-black bg-white hover:bg-neutral-200 shadow-xl flex items-center gap-2 transition-all active:scale-95"
+              >
+                <span>Consult Trade Desk</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={onOpenCalculator}
+                className="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-black/80 backdrop-blur-md border border-white/30 hover:bg-black/90 hover:border-white/50 transition-all"
+              >
+                Cargo Estimator Tool
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -53,13 +53,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenQuoteModal }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="inline-block bg-white rounded-xl p-2 shadow-lg">
-              <img
-                src={SITE_IMAGES.logoColor}
-                alt="The Developers Energy Logo"
-                className="h-20 w-auto object-contain"
-              />
-            </div>
+            <img
+              src={SITE_IMAGES.logoColor}
+              alt="The Developers Energy Logo"
+              className="h-24 sm:h-28 max-h-32 w-auto object-contain"
+            />
 
             <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">
               A strategic bridge across the energy value chain. Facilitating physical petroleum trades, providing high-precision market intelligence, supporting infrastructure assets, and empowering human capital.
